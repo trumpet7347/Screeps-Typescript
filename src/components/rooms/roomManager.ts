@@ -18,6 +18,11 @@ export function getFirstRoom(): Room {
   return rooms[roomNames[0]];
 }
 
+export function getFirstDroppedResource(room: Room) {
+  let resources = room.find(FIND_DROPPED_RESOURCES);
+  return resources[0];
+}
+
 function _loadRoomNames() {
   for (let roomName in rooms) {
     if (rooms.hasOwnProperty(roomName)) {

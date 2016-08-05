@@ -19,12 +19,11 @@ export function loadCreeps(): void {
 }
 
 export function createHarvester(): number | string {
-  let bodyParts: string[] = [MOVE, MOVE, CARRY, WORK];
+  let bodyParts: string[] = [MOVE, WORK, WORK];
   let name: string = null;
   let properties: { [key: string]: any } = {
     renew_station_id: SpawnManager.getFirstSpawn().id,
     role: "harvester",
-    target_energy_dropoff_id: SpawnManager.getFirstSpawn().id,
     target_source_id: SourceManager.getFirstSource().id,
   };
 
